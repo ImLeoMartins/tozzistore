@@ -95,10 +95,7 @@ export default function CategoriesSection() {
                   </p>
 
                   {/* Arrow indicator */}
-                  <div className="mt-4 inline-flex items-center gap-2 text-foreground font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    Ver Mais
-                    <span className="transform group-hover:translate-x-1 transition-transform">→</span>
-                  </div>
+                  
                 </div>
               </div>
             );

@@ -1,168 +1,157 @@
-import { Star, ShoppingCart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-/**
- * Featured Products Section - Industrial Moderno Design
- * Features: Product showcase grid with ratings and pricing
- * Uses generated products showcase background
- */
+import logoSil from '../assets/Logos/Sil.png'
+import logoJng from '../assets/Logos/JNG.png'
+import logoTramontina from '../assets/Logos/Tramontina.png'
+import logoSchneider from '../assets/Logos/Schneider.png'
+import logoMargirius from '../assets/Logos/Margirius.png'
+import logoBrum from '../assets/Logos/Brum.png'
+import logoIntelbras from '../assets/Logos/intelbras.png'
+import logoLorenzetti from '../assets/Logos/Lorenzetti.png'
+import logoDewalt from '../assets/Logos/Dewalt.png'
+
+
+
 export default function FeaturedProducts() {
-  const products = [
+  const suppliers = [
     {
       id: 1,
-      name: 'Cabo Elétrico 2.5mm',
-      category: 'Cabos',
-      price: 'R$ 45,90',
-      rating: 4.8,
-      reviews: 124,
-      image: '🔌',
+      name: 'Sil',
+      category: 'Cabos Elétricos',
+      description: 'Referência nacional em fios e cabos.',
+      logo: logoSil,
+      bg: '#FFF8E1',
     },
     {
       id: 2,
-      name: 'Disjuntor 32A',
-      category: 'Proteção',
-      price: 'R$ 89,50',
-      rating: 4.9,
-      reviews: 98,
-      image: '⚡',
+      name: 'JNG',
+      category: 'Disjuntores',
+      description: 'Soluções completas em proteção elétrica.',
+      logo: logoJng,
+      bg: '#E8F0FE',
     },
     {
       id: 3,
-      name: 'LED Bulbo 12W',
-      category: 'Iluminação',
-      price: 'R$ 28,90',
-      rating: 4.7,
-      reviews: 156,
-      image: '💡',
+      name: 'Tramontina',
+      category: 'Ferramentas',
+      description: 'Qualidade e tradição brasileira.',
+      logo: logoTramontina,
+      bg: '#E8F0FE',
     },
     {
       id: 4,
-      name: 'Multímetro Digital',
-      category: 'Medidores',
-      price: 'R$ 125,00',
-      rating: 4.9,
-      reviews: 87,
-      image: '📊',
+      name: 'Schneider',
+      category: 'Disjuntores',
+      description: 'Soluções completas em proteção elétrica.',
+      logo: logoSchneider,
+      bg: '#ebffe5',
     },
     {
       id: 5,
-      name: 'Tomada Dupla 20A',
-      category: 'Conectores',
-      price: 'R$ 35,90',
-      rating: 4.6,
-      reviews: 203,
-      image: '🔌',
+      name: 'Margirius',
+      category: 'Controles eletricos',
+      description: 'Uma das principais fabricantes de controles eletricos',
+      logo: logoMargirius,
+      bg: '#e8f1ff',
     },
     {
       id: 6,
-      name: 'Chave Inglesa 10\"',
+      name: 'Brum',
+      category: 'Quadros Distribuição',
+      description: 'Quadros pra distribuição.',
+      logo: logoBrum,
+      bg: '#EEF2FF',
+    },
+    {
+      id: 7,
+      name: 'Intelbras',
+      category: 'Segurança',
+      description: 'Líder em soluções de alta tecnologia em segurança.',
+      logo: logoIntelbras,
+      bg: '#eefff4',
+    },
+    {
+      id: 8,
+      name: 'Lorenzetti',
+      category: 'Duchas e aquecedores',
+      description: 'Líder em duchas e chuveiros.',
+      logo: logoLorenzetti,
+      bg: '#ffeeee',
+    },
+    {
+      id: 9,
+      name: 'DeWalt',
       category: 'Ferramentas',
-      price: 'R$ 42,50',
-      rating: 4.8,
-      reviews: 142,
-      image: '🔧',
+      description: 'Líder em ferramentas elétricas industriais de alta performance.',
+      logo: logoDewalt,
+      bg: '#fff9ee',
     },
   ];
 
   return (
     <section className="py-20 md:py-32 bg-white relative">
-      {/* Decorative element */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full -ml-48 -mt-48"></div>
+      <div className="container">
 
-      <div className="container relative z-10">
-        {/* Section Header */}
+        {/* Header */}
         <div className="mb-16">
           <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-6">
             <span className="w-2 h-2 bg-primary rounded-full"></span>
-            <span className="text-sm font-semibold text-primary">Destaques</span>
+            <span className="text-sm font-semibold text-primary">
+              Destaques
+            </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Produtos em Destaque
+
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Nossos parceiros
           </h2>
+
           <p className="text-lg text-muted-foreground max-w-2xl">
-            Conheça alguns dos nossos produtos mais vendidos e bem avaliados
+            Trabalhamos com marcas reconhecidas no mercado, garantindo qualidade,
+            segurança e desempenho em cada produto.
           </p>
         </div>
 
-        {/* Products Grid */}
+        {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product) => (
+          {suppliers.map((item) => (
             <div
-              key={product.id}
-              className="group relative bg-white border border-border rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1"
+              key={item.id}
+              className="group rounded-2xl overflow-hidden border border-border bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
-              {/* Product Image Area */}
-              <div className="relative h-48 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center overflow-hidden">
-                {/* Diagonal accent */}
-                <div className="absolute top-0 right-0 w-24 h-24 bg-primary/10 rounded-full -mr-12 -mt-12 group-hover:scale-150 transition-transform"></div>
-
-                {/* Image Placeholder with Emoji */}
-                <div className="text-6xl group-hover:scale-110 transition-transform duration-300">
-                  {product.image}
-                </div>
-
-                {/* Badge */}
-                <div className="absolute top-4 left-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-bold">
-                  {product.category}
-                </div>
+              {/* Área da logo */}
+              <div
+                className="h-52 flex items-center justify-center p-8"
+                style={{ backgroundColor: item.bg }}
+              >
+                <img
+                  src={item.logo}
+                  alt={item.name}
+                  className="max-h-60 object-contain group-hover:scale-110 transition duration-300"
+                />
               </div>
 
-              {/* Product Info */}
+              {/* Conteúdo */}
               <div className="p-6">
-                {/* Title */}
-                <h3 className="text-lg font-bold text-foreground mb-2 line-clamp-2">
-                  {product.name}
+                <p className="text-sm text-primary font-semibold mb-2">
+                  {item.category}
+                </p>
+
+                <h3 className="text-2xl font-bold mb-2">
+                  {item.name}
                 </h3>
 
-                {/* Rating */}
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="flex items-center gap-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        size={16}
-                        className={
-                          i < Math.floor(product.rating)
-                            ? 'fill-primary text-primary'
-                            : 'text-muted'
-                        }
-                      />
-                    ))}
-                  </div>
-                  <span className="text-sm font-semibold text-foreground">
-                    {product.rating}
-                  </span>
-                  <span className="text-xs text-muted-foreground">
-                    ({product.reviews})
-                  </span>
-                </div>
-
-                {/* Price and Button */}
-                <div className="flex items-center justify-between pt-4 border-t border-border">
-                  <span className="text-2xl font-bold text-primary">
-                    {product.price}
-                  </span>
-                  <button className="p-2 bg-primary/10 hover:bg-primary text-primary hover:text-primary-foreground rounded-lg transition-all duration-300 ease-in-out">
-                    <ShoppingCart size={20} />
-                  </button>
-                </div>
+                <p className="text-muted-foreground text-sm">
+                  {item.description}
+                </p>
               </div>
 
-              {/* Bottom accent line */}
-              <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-primary to-transparent w-0 group-hover:w-full transition-all duration-300"></div>
+              {/* Linha hover */}
+              <div className="h-1 bg-primary w-0 group-hover:w-full transition-all duration-300"></div>
             </div>
           ))}
         </div>
 
-        {/* View All Button */}
-        <div className="text-center mt-16">
-          <Button
-            size="lg"
-            className="bg-primary hover:bg-yellow-600 text-primary-foreground font-bold rounded-lg transition-all duration-300 ease-in-out"
-          >
-            Ver Todos os Produtos
-          </Button>
-        </div>
+        {/* botão */}
       </div>
     </section>
   );

@@ -5,6 +5,7 @@ import CategoriesSection from '@/components/CategoriesSection';
 import FeaturedProducts from '@/components/FeaturedProducts';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import Footer from '@/components/Footer';
+import FloatingWhatsApp from '@/components/FloatingWhatsapp';
 
 /**
  * Home Page - Tozzi Materiais Elétricos
@@ -30,7 +31,7 @@ export default function Home() {
 
         {/* Featured Products */}
         <FeaturedProducts />
-
+<FloatingWhatsApp/>
         {/* Testimonials */}
         <TestimonialsSection />
       </main>

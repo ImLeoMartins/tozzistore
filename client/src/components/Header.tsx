@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Menu, X, ShoppingCart, Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import tozzilogo from '../assets/tozzilogo.png'
+import tozzilogo from '../assets/Logos/tozzilogo.png'
 
 /**
  * Header Component - Industrial Moderno Design
@@ -13,19 +13,19 @@ export default function Header() {
 
   const navItems = [
     { label: 'Início', href: '#' },
-    { label: 'Produtos', href: '#produtos' },
-    { label: 'Categorias', href: '#categorias' },
+    { label: 'Orçamento', href: '#orcamentos' },
+    { label: 'Fornecedores', href: '#fornecedores' },
     { label: 'Sobre', href: '#sobre' },
     { label: 'Contato', href: '#contato' },
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-[#1A3D2B] border-b border-border shadow-sm">
+    <header className="sticky top-0 z-50 bg-[#1A3D2B] shadow-sm border-b border-black/10">
       <div className="container">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <img src={ tozzilogo } alt="ieuslapoha" className='h-50 w-auto'/>
+            <img src={ tozzilogo } alt="tozzilogo" className='h-50 w-auto'/>
           </div>
 
           {/* Desktop Navigation */}

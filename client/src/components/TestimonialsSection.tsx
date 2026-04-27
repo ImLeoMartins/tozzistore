@@ -9,8 +9,8 @@ export default function TestimonialsSection() {
   const testimonials = [
     {
       id: 1,
-      name: 'João Silva',
-      role: 'Eletricista',
+      name: 'Reginaldo Delain',
+      role: 'Eletricista parceiro',
       content:
         'Excelente qualidade de produtos e atendimento. Sempre encontro tudo que preciso com preços muito competitivos.',
       rating: 5,
@@ -18,21 +18,21 @@ export default function TestimonialsSection() {
     },
     {
       id: 2,
-      name: 'Maria Santos',
-      role: 'Engenheira Elétrica',
+      name: 'Pablo',
+      role: 'Eletricista parceiro',
       content:
-        'A Tozzi é minha fornecedora preferida. Produtos certificados e entrega rápida. Recomendo!',
+        'Ótimo atendimento e preço justo (também parcelam em 10x no cartão de crédito!)',
       rating: 5,
-      avatar: '👩‍💼',
+      avatar: '👨‍🔧',
     },
     {
       id: 3,
-      name: 'Carlos Oliveira',
-      role: 'Proprietário de Loja',
+      name: 'Calebe',
+      role: 'Eletricista parceiro',
       content:
         'Parceria de confiança há 3 anos. Suporte excelente e produtos sempre em estoque.',
       rating: 5,
-      avatar: '👨‍💼',
+      avatar: '👨‍🔧',
     },
   ];
 

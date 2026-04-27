@@ -1,138 +1,125 @@
-import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
+import {
+  Phone,
+  MapPin,
+  Instagram,
+  Facebook,
+  Clock
+} from 'lucide-react';
 
-/**
- * Footer Component - Industrial Moderno Design
- * Features: Contact info, links, social media, newsletter
- */
 export default function Footer() {
   return (
-    <footer className="bg-foreground text-white py-16 md:py-20">
+    <footer className="bg-[#1A3D2B] text-white py-16">
       <div className="container">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          {/* Company Info */}
+
+        {/* GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+          {/* Marca */}
           <div>
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-foreground font-bold">⚡</span>
-              </div>
-              <div>
-                <h3 className="font-bold text-lg">Tozzi</h3>
-                <p className="text-xs text-white/70">Materiais Elétricos</p>
-              </div>
-            </div>
-            <p className="text-white/80 leading-relaxed text-sm">
-              Sua loja online de confiança para materiais e equipamentos elétricos de qualidade.
+            <h3 className="text-2xl font-bold mb-4">
+              Tozzi
+            </h3>
+
+            <p className="text-white/70 leading-relaxed text-sm">
+              Materiais elétricos, hidráulicos, iluminação,
+              ferramentas e atendimento especializado para sua obra.
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Loja 1 */}
           <div>
-            <h4 className="font-bold text-lg mb-6">Links Rápidos</h4>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-white/80 hover:text-primary transition-all duration-300 ease-in-out text-sm">
-                  Início
-                </a>
+            <h4 className="font-bold text-lg mb-5 text-primary">
+              Loja Cerquilho
+            </h4>
+
+            <ul className="space-y-4 text-sm">
+              <li className="flex gap-3">
+                <MapPin size={18} className="text-primary mt-1" />
+                <span>
+                  <a
+                    href="https://maps.app.goo.gl/fFH4SJvTEjfqGbDV8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white underline hover:text-primary transition"
+                  >
+                    Av. Washington Luíz, 646 <br />
+                    Centro - Cerquilho/SP
+                  </a>
+                </span>
               </li>
-              <li>
-                <a href="#" className="text-white/80 hover:text-primary transition-all duration-300 ease-in-out text-sm">
-                  Produtos
-                </a>
+
+              <li className="flex gap-3">
+                <Phone size={18} className="text-primary mt-1" />
+                <span>(15) 3384-1068</span>
               </li>
-              <li>
-                <a href="#" className="text-white/80 hover:text-primary transition-all duration-300 ease-in-out text-sm">
-                  Categorias
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-white/80 hover:text-primary transition-all duration-300 ease-in-out text-sm">
-                  Sobre Nós
-                </a>
+
+              <li className="flex gap-3">
+                <Clock size={18} className="text-primary mt-1" />
+                <span>Seg a Sex: 7h às 18h</span>
               </li>
             </ul>
           </div>
 
-          {/* Support */}
+          {/* Loja 2 */}
           <div>
-            <h4 className="font-bold text-lg mb-6">Suporte</h4>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-white/80 hover:text-primary transition-all duration-300 ease-in-out text-sm">
-                  Fale Conosco
-                </a>
+            <h4 className="font-bold text-lg mb-5 text-primary">
+              Loja Tietê
+            </h4>
+
+            <ul className="space-y-4 text-sm">
+              <li className="flex gap-3">
+                <MapPin size={18} className="text-primary mt-1" />
+                  <a
+                    href="https://maps.app.goo.gl/gYJCoEgBcfiTjT4J9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white underline hover:text-primary transition"
+                  >
+                    Av. Fernando Costa 301 <br />
+                    Centro - Tietê/SP
+                  </a>
               </li>
-              <li>
-                <a href="#" className="text-white/80 hover:text-primary transition-all duration-300 ease-in-out text-sm">
-                  FAQ
-                </a>
+
+              <li className="flex gap-3">
+                <Phone size={18} className="text-primary mt-1" />
+                <span>(15) 99888-7766</span>
               </li>
-              <li>
-                <a href="#" className="text-white/80 hover:text-primary transition-all duration-300 ease-in-out text-sm">
-                  Política de Privacidade
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-white/80 hover:text-primary transition-all duration-300 ease-in-out text-sm">
-                  Termos de Uso
-                </a>
+
+              <li className="flex gap-3">
+                <Clock size={18} className="text-primary mt-1" />
+                <span>Seg a Sáb: 8h às 17h</span>
               </li>
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Navegação / Redes */}
           <div>
-            <h4 className="font-bold text-lg mb-6">Contato</h4>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <Phone size={18} className="text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <p className="text-white/80 text-sm">(11) 9999-9999</p>
-                  <p className="text-white/60 text-xs">Seg-Sex: 8h-18h</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <Mail size={18} className="text-primary flex-shrink-0 mt-1" />
-                <p className="text-white/80 text-sm">contato@tozzi.com.br</p>
-              </li>
-              <li className="flex items-start gap-3">
-                <MapPin size={18} className="text-primary flex-shrink-0 mt-1" />
-                <p className="text-white/80 text-sm">São Paulo, SP</p>
-              </li>
+            <h4 className="font-bold text-lg mb-5 text-primary">
+              Navegação
+            </h4>
+
+            <ul className="space-y-3 text-sm mb-6">
+              <li><a href="#" className="hover:text-primary">Início</a></li>
+              <li><a href="#orcamentos" className="hover:text-primary">Orçamento</a></li>
+              <li><a href="#fornecedores" className="hover:text-primary">Fornecedores</a></li>
+              <li><a href="#contato" className="hover:text-primary">Contato</a></li>
             </ul>
+
+            <div className="flex gap-4">
+              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition">
+                <Instagram size={18} />
+              </a>
+
+              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition">
+                <Facebook size={18} />
+              </a>
+            </div>
           </div>
         </div>
 
-        {/* Divider */}
-        <div className="border-t border-white/10 py-8">
-          {/* Social Media */}
-          <div className="flex justify-center gap-6 mb-8">
-            <a
-              href="#"
-              className="w-10 h-10 bg-white/10 hover:bg-primary rounded-full flex items-center justify-center transition-all duration-300 ease-in-out"
-            >
-              <Facebook size={18} />
-            </a>
-            <a
-              href="#"
-              className="w-10 h-10 bg-white/10 hover:bg-primary rounded-full flex items-center justify-center transition-all duration-300 ease-in-out"
-            >
-              <Instagram size={18} />
-            </a>
-            <a
-              href="#"
-              className="w-10 h-10 bg-white/10 hover:bg-primary rounded-full flex items-center justify-center transition-all duration-300 ease-in-out"
-            >
-              <Linkedin size={18} />
-            </a>
-          </div>
-
-          {/* Copyright */}
-          <div className="text-center text-white/60 text-sm">
-            <p>
-              &copy; 2024 Tozzi Materiais Elétricos. Todos os direitos reservados.
-            </p>
-          </div>
+        {/* Linha */}
+        <div className="border-t border-white/10 mt-12 pt-8 text-center text-sm text-white/60">
+          © 2026 Tozzi Materiais Elétricos — Todos os direitos reservados.
         </div>
       </div>
     </footer>
