@@ -10,6 +10,10 @@ import tozzicerq1 from '../assets/tozzicerq1.jpg';
 import tozzicerq2 from '../assets/tozzicerq2.jpg';
 import tozzicerq3 from '../assets/tozzicerq3.jpg';
 
+  const phoneNumber = '5515991163645'; // coloque seu número com DDD
+  const message = 'Olá! Vim pelo site e gostaria de um orçamento.';
+  
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
 /**
  * Hero Section com carrossel no background
@@ -42,9 +46,8 @@ export default function HeroSection() {
         {images.map((image, index) => (
           <div
             key={index}
-            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
-              index === currentImage ? 'opacity-100' : 'opacity-0'
-            }`}
+            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${index === currentImage ? 'opacity-100' : 'opacity-0'
+              }`}
             style={{
               backgroundImage: `url(${image})`,
               backgroundAttachment: 'fixed',
@@ -84,25 +87,28 @@ export default function HeroSection() {
 
           {/* Botões */}
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button
-              size="lg"
-              className="bg-primary hover:bg-yellow-600 text-primary-foreground font-bold rounded-lg transition-all duration-300 shadow-lg"
-            >
-             Faça um orçamento
-              <ArrowRight className="ml-2" size={20} />
-            </Button>
+            <a href= { whatsappLink }>
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-yellow-600 text-primary-foreground font-bold rounded-lg transition-all duration-300 shadow-lg"
+              >
+                Faça um orçamento
+                <ArrowRight className="ml-2" size={20} />
+              </Button>
 
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-2 border-white text-white hover:bg-white/10 font-bold rounded-lg transition-all duration-300"
-            >
-              Saiba Mais
-            </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-2 border-white text-white hover:bg-white/10 font-bold rounded-lg transition-all duration-300"
+              >
+                Saiba Mais
+              </Button>
+            </a>
+
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 mt-16 pt-16 border-t border-white/20">
+          <div className="grid grid-cols-2 mt-16 pt-16 border-t border-white/20">
             <div>
               <p className="text-3xl font-bold text-primary">1000+</p>
               <p className="text-sm text-gray-200">Produtos em Estoque</p>
@@ -111,11 +117,6 @@ export default function HeroSection() {
             <div>
               <p className="text-3xl font-bold text-primary">500+</p>
               <p className="text-sm text-gray-200">Clientes Satisfeitos</p>
-            </div>
-
-            <div>
-              <p className="text-3xl font-bold text-primary">24h</p>
-              <p className="text-sm text-gray-200">Entrega Rápida</p>
             </div>
           </div>
         </div>

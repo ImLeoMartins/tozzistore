@@ -55,7 +55,7 @@ export default function Footer() {
 
               <li className="flex gap-3">
                 <Clock size={18} className="text-primary mt-1" />
-                <span>Seg a Sex: 7h às 18h</span>
+                <span>Seg a Sex: 7h às 17h</span>
               </li>
             </ul>
           </div>
@@ -75,19 +75,19 @@ export default function Footer() {
                     rel="noopener noreferrer"
                     className="text-white underline hover:text-primary transition"
                   >
-                    Av. Fernando Costa 301 <br />
+                    Av. Fernando Costa, 301 <br />
                     Centro - Tietê/SP
                   </a>
               </li>
 
               <li className="flex gap-3">
                 <Phone size={18} className="text-primary mt-1" />
-                <span>(15) 99888-7766</span>
+                <span>(15) 2108-1430</span>
               </li>
 
               <li className="flex gap-3">
                 <Clock size={18} className="text-primary mt-1" />
-                <span>Seg a Sáb: 8h às 17h</span>
+                <span>Seg a Sáb: 7h às 17h</span>
               </li>
             </ul>
           </div>
@@ -106,11 +106,11 @@ export default function Footer() {
             </ul>
 
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition">
+              <a href="https://www.instagram.com/tozzimateriaiseletricos/" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition">
                 <Instagram size={18} />
               </a>
 
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition">
+              <a href="https://www.facebook.com/p/Tozzi-Materiais-El%C3%A9tricos-100083655101902/" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition">
                 <Facebook size={18} />
               </a>
             </div>

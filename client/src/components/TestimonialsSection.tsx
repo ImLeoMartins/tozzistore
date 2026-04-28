@@ -34,6 +34,33 @@ export default function TestimonialsSection() {
       rating: 5,
       avatar: '👨‍🔧',
     },
+    {
+      id: 4,
+      name: 'Reginaldo Delain',
+      role: 'Eletricista parceiro',
+      content:
+        'Excelente qualidade de produtos e atendimento. Sempre encontro tudo que preciso com preços muito competitivos.',
+      rating: 5,
+      avatar: '👨‍🔧',
+    },
+    {
+      id: 5,
+      name: 'Pablo',
+      role: 'Eletricista parceiro',
+      content:
+        'Ótimo atendimento e preço justo (também parcelam em 10x no cartão de crédito!)',
+      rating: 5,
+      avatar: '👨‍🔧',
+    },
+    {
+      id: 6,
+      name: 'Calebe',
+      role: 'Eletricista parceiro',
+      content:
+        'Parceria de confiança há 3 anos. Suporte excelente e produtos sempre em estoque.',
+      rating: 5,
+      avatar: '👨‍🔧',
+    },
   ];
 
   return (
