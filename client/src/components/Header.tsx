@@ -11,11 +11,26 @@ import tozzilogo from '../assets/Logos/tozzilogo.png'
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const phoneNumber = '5515991163645'; // coloque seu número com DDD
+  const message = 'Olá! Vim pelo site e gostaria de um orçamento.';
+
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+const handleScroll = (href: string) => {
+  const element = document.querySelector(href);
+
+  if (element) {
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  }
+};
   const navItems = [
-    { label: 'Início', href: '#' },
-    { label: 'Orçamento', href: '#orcamentos' },
+    { label: 'Início', href: '#inicio' },
+    { label: 'Orçamento', href: whatsappLink },
+    { label: 'Feedbacks', href: '#feedbacks' },
     { label: 'Parceiros', href: '#parceiros' },
-    { label: 'Sobre', href: '#sobre' },
     { label: 'Contato', href: '#contato' },
   ];
 
@@ -25,20 +40,32 @@ export default function Header() {
         <div className="relative flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <img src={ tozzilogo } alt="tozzilogo" className='h-50 w-auto'/>
+            <img src={tozzilogo} alt="tozzilogo" className='h-50 w-auto' />
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2 space-between">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="text-foreground text-white hover:text-primary font-medium transition-all duration-300 ease-in-out text-sm"
-              >
-                {item.label}
-              </a>
-            ))}
+            {navItems.map((item) =>
+              item.href.startsWith('#') ? (
+                <button
+                  key={item.label}
+                  onClick={() => handleScroll(item.href)}
+                  className="text-white hover:text-primary font-medium transition-all duration-300 text-sm"
+                >
+                  {item.label}
+                </button>
+              ) : (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-primary font-medium transition-all duration-300 text-sm"
+                >
+                  {item.label}
+                </a>
+              )
+            )}
           </nav>
 
           {/* Right Actions */}

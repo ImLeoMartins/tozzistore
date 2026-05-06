@@ -18,7 +18,7 @@ export default function TestimonialsSection() {
     },
     {
       id: 2,
-      name: 'Pablo',
+      name: 'Antônio Lucas Cega',
       role: 'Eletricista parceiro',
       content:
         'Ótimo atendimento e preço justo (também parcelam em 10x no cartão de crédito!)',
@@ -35,36 +35,36 @@ export default function TestimonialsSection() {
       avatar: '👨‍🔧',
     },
     {
-      id: 4,
-      name: 'Reginaldo Delain',
+      id: 7,
+      name: 'William Grisoto',
       role: 'Eletricista parceiro',
       content:
-        'Excelente qualidade de produtos e atendimento. Sempre encontro tudo que preciso com preços muito competitivos.',
+        'Atendimento rápido e equipe muito prestativa. Sempre encontro material de qualidade com ótimo custo-benefício.',
       rating: 5,
       avatar: '👨‍🔧',
     },
     {
-      id: 5,
-      name: 'Pablo',
+      id: 8,
+      name: 'Irmão Joel',
       role: 'Eletricista parceiro',
       content:
-        'Ótimo atendimento e preço justo (também parcelam em 10x no cartão de crédito!)',
+        'Loja organizada, excelente variedade de materiais e atendimento diferenciado. Resolve minhas compras com agilidade.',
       rating: 5,
       avatar: '👨‍🔧',
     },
     {
-      id: 6,
-      name: 'Calebe',
+      id: 9,
+      name: 'Marcos Oficina do lar',
       role: 'Eletricista parceiro',
       content:
-        'Parceria de confiança há 3 anos. Suporte excelente e produtos sempre em estoque.',
+        'Compro há bastante tempo e sempre fui muito bem atendido. Produtos confiáveis, bons preços e entrega no prazo.',
       rating: 5,
       avatar: '👨‍🔧',
     },
   ];
 
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
+    <section id='feedbacks' className="py-20 md:py-32 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full -mr-48 -mt-48"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full -ml-48 -mb-48"></div>

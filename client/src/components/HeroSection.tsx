@@ -40,7 +40,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative w-full overflow-hidden bg-gradient-to-b from-slate-50 to-white">
+    <section id="inicio" className="relative w-full overflow-hidden scroll-mt-24 bg-gradient-to-b from-slate-50 to-white">
       {/* Background Carousel */}
       <div className="absolute inset-0 w-full h-full">
         {images.map((image, index) => (
@@ -87,23 +87,31 @@ export default function HeroSection() {
 
           {/* Botões */}
           <div className="flex flex-col sm:flex-row gap-4">
-            <a href= { whatsappLink }>
-              <Button
-                size="lg"
-                className="bg-primary hover:bg-yellow-600 text-primary-foreground font-bold rounded-lg transition-all duration-300 shadow-lg"
-              >
-                Faça um orçamento
-                <ArrowRight className="ml-2" size={20} />
-              </Button>
+            <div className="flex flex-col sm:flex-row gap-4">
+  <a href={whatsappLink}>
+    <Button
+      size="lg"
+      className="bg-primary hover:bg-yellow-600 text-primary-foreground font-bold rounded-lg"
+    >
+      Faça um orçamento
+      <ArrowRight className="ml-2" size={20} />
+    </Button>
+  </a>
 
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-2 border-white text-white hover:bg-white/10 font-bold rounded-lg transition-all duration-300"
-              >
-                Saiba Mais
-              </Button>
-            </a>
+  <button onClick={() => {
+    document.querySelector('#sobre')?.scrollIntoView({
+      behavior: 'smooth'
+    });
+  }}>
+    <Button
+      variant="outline"
+      size="lg"
+      className="border-2 border-white text-white hover:bg-white/10 font-bold"
+    >
+      Saiba Mais
+    </Button>
+  </button>
+</div>
 
           </div>
 

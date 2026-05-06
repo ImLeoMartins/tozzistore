@@ -8,7 +8,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1A3D2B] text-white py-16">
+    <footer id="contato" className="bg-[#1A3D2B] text-white py-16 scroll-mt-24">
       <div className="container">
 
         {/* GRID */}

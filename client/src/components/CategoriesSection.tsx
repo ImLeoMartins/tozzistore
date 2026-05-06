@@ -58,10 +58,10 @@ export default function CategoriesSection() {
             <span className="text-sm font-semibold text-primary">Categorias</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Explore Nossas Categorias
+            Com o que trabalhamos?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl">
-            Encontre tudo que você precisa em materiais elétricos organizados por categoria
+            Encontre tudo que você precisa em materiais elétricos na Tozzi
           </p>
         </div>
 

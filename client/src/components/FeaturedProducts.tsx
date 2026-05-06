@@ -89,7 +89,7 @@ export default function FeaturedProducts() {
   ];
 
   return (
-    <section className="py-20 md:py-32 bg-white relative">
+    <section id="parceiros" className="py-20 md:py-32 scroll-mt-24 bg-white relative">
       <div className="container">
 
         {/* Header */}
