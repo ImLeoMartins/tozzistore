@@ -6,6 +6,12 @@ import {
   Clock
 } from 'lucide-react';
 
+
+  const phoneNumber = '5515991163645'; // coloque seu número com DDD
+  const message = 'Olá! Vim pelo site e gostaria de um orçamento.';
+
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
 export default function Footer() {
   return (
     <footer id="contato" className="bg-[#1A3D2B] text-white py-16 scroll-mt-24">
@@ -99,9 +105,9 @@ export default function Footer() {
             </h4>
 
             <ul className="space-y-3 text-sm mb-6">
-              <li><a href="#" className="hover:text-primary">Início</a></li>
-              <li><a href="#orcamentos" className="hover:text-primary">Orçamento</a></li>
-              <li><a href="#fornecedores" className="hover:text-primary">Fornecedores</a></li>
+              <li><a href="#inicio" className="hover:text-primary">Início</a></li>
+              <li><a href={ whatsappLink } className="hover:text-primary">Orçamento</a></li>
+              <li><a href="#parceiros" className="hover:text-primary">Parceiros</a></li>
               <li><a href="#contato" className="hover:text-primary">Contato</a></li>
             </ul>
 
