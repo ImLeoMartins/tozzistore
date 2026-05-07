@@ -79,9 +79,9 @@ const handleScroll = (href: string) => {
               className="md:hidden p-2 hover:bg-muted rounded-lg transition-all duration-300 ease-in-out"
             >
               {mobileMenuOpen ? (
-                <X size={24} className="text-foreground" />
+                <X size={24} className="text-white" />
               ) : (
-                <Menu size={24} className="text-foreground" />
+                <Menu size={24} className="text-white" />
               )}
             </button>
           </div>
@@ -94,7 +94,7 @@ const handleScroll = (href: string) => {
               <a
                 key={item.label}
                 href={item.href}
-                className="block py-2 px-0 text-foreground hover:text-primary font-medium transition-all duration-300 ease-in-out text-sm"
+                className="block py-2 px-0 text-white hover:text-primary font-medium transition-all duration-300 ease-in-out text-sm"
               >
                 {item.label}
               </a>

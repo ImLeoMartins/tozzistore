@@ -14,7 +14,7 @@ import FloatingWhatsApp from '@/components/FloatingWhatsapp';
  */
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col bg-white overflow-x-hidden">
       {/* Header */}
       <Header />
 
@@ -31,7 +31,7 @@ export default function Home() {
 
         {/* Featured Products */}
         <FeaturedProducts />
-<FloatingWhatsApp/>
+        <FloatingWhatsApp />
         {/* Testimonials */}
         <TestimonialsSection />
       </main>

@@ -10,10 +10,10 @@ import tozzicerq1 from '../assets/tozzicerq1.jpg';
 import tozzicerq2 from '../assets/tozzicerq2.jpg';
 import tozzicerq3 from '../assets/tozzicerq3.jpg';
 
-  const phoneNumber = '5515991163645'; // coloque seu número com DDD
-  const message = 'Olá! Vim pelo site e gostaria de um orçamento.';
-  
-  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+const phoneNumber = '5515991163645'; // coloque seu número com DDD
+const message = 'Olá! Vim pelo site e gostaria de um orçamento.';
+
+const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
 /**
  * Hero Section com carrossel no background
@@ -87,31 +87,30 @@ export default function HeroSection() {
 
           {/* Botões */}
           <div className="flex flex-col sm:flex-row gap-4">
-            <div className="flex flex-col sm:flex-row gap-4">
-  <a href={whatsappLink}>
-    <Button
-      size="lg"
-      className="bg-primary hover:bg-yellow-600 text-primary-foreground font-bold rounded-lg"
-    >
-      Faça um orçamento
-      <ArrowRight className="ml-2" size={20} />
-    </Button>
-  </a>
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+              <a href={whatsappLink} className="w-full sm:w-auto">
+                <Button
+                  size="lg"
+                  className="w-full sm:w-auto bg-primary hover:bg-yellow-600 text-primary-foreground font-bold rounded-lg"
+                >
+                  Faça um orçamento
+                  <ArrowRight className="ml-2" size={20} />
+                </Button>
+              </a>
 
-  <button onClick={() => {
-    document.querySelector('#saibamais')?.scrollIntoView({
-      behavior: 'smooth'
-    });
-  }}>
-    <Button
-      variant="outline"
-      size="lg"
-      className="border-2 border-white text-white hover:bg-white/10 font-bold"
-    >
-      Saiba Mais
-    </Button>
-  </button>
-</div>
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() => {
+                  document.querySelector('#saibamais')?.scrollIntoView({
+                    behavior: 'smooth',
+                  });
+                }}
+                className="w-full sm:w-auto border-2 border-white text-white hover:bg-white/10 font-bold rounded-lg"
+              >
+                Saiba Mais
+              </Button>
+            </div>
 
           </div>
 
