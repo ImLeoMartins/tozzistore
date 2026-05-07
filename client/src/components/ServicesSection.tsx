@@ -10,7 +10,7 @@ export default function ServicesSection() {
     {
       icon: Truck,
       title: 'Entrega Rápida',
-      description: 'Entrega em 24-48 horas para a maioria das regiões',
+      description: 'Entrega em menos de 24h para a maioria das regiões',
     },
     {
       icon: Shield,

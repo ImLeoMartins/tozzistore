@@ -1,4 +1,4 @@
-import { Zap, Cable, Lightbulb, Wrench, Gauge, Shield } from 'lucide-react';
+import { Zap, Cable, Lightbulb, Wrench, ShieldCheck, WifiHigh} from 'lucide-react';
 
 /**
  * Categories Section - Industrial Moderno Design
@@ -9,38 +9,38 @@ export default function CategoriesSection() {
   const categories = [
     {
       icon: Zap,
-      name: 'Cabos e Fios',
-      count: '250+ produtos',
+      name: 'Cabos e fios',
+      count: '250+ produtos: Cabo PP, Paralelo...',
       color: 'from-yellow-50 to-yellow-100',
     },
     {
       icon: Lightbulb,
       name: 'Iluminação',
-      count: '180+ produtos',
+      count: '180+ produtos: Lâmpadas, Plafons...',
       color: 'from-blue-50 to-blue-100',
     },
     {
       icon: Wrench,
       name: 'Ferramentas',
-      count: '320+ produtos',
+      count: '320+ produtos: Chaves, Medidores...',
       color: 'from-orange-50 to-orange-100',
     },
     {
-      icon: Gauge,
-      name: 'Medidores',
-      count: '95+ produtos',
+      icon: WifiHigh,
+      name: 'Automação Industrial',
+      count: '99+ produtos: Inversores, Soft-start...',
       color: 'from-purple-50 to-purple-100',
     },
     {
-      icon: Shield,
-      name: 'Proteção',
-      count: '210+ produtos',
+      icon: ShieldCheck,
+      name: 'Proteção eletrica',
+      count: '210+ produtos: DPS, Disjuntores...',
       color: 'from-red-50 to-red-100',
     },
     {
       icon: Cable,
       name: 'Conectores',
-      count: '340+ produtos',
+      count: '340+ produtos: Wagos, Plugs, Terminais...',
       color: 'from-green-50 to-green-100',
     },
   ];
