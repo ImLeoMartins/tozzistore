@@ -99,7 +99,7 @@ export default function HeroSection() {
   </a>
 
   <button onClick={() => {
-    document.querySelector('#sobre')?.scrollIntoView({
+    document.querySelector('#saibamais')?.scrollIntoView({
       behavior: 'smooth'
     });
   }}>
